@@ -99,7 +99,9 @@ class OnboardDescription extends StatelessWidget {
                 ),
                 backgroundColor: Color(0xFF4A80FF)
               ),
-              onPressed: () {},
+              onPressed: () {
+                print('clicked');
+              },
               child: Text(
                 'Continue',
                 style: TextStyle(

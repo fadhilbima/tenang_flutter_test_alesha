@@ -142,11 +142,32 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     );
                   }
               ),
-              OnboardCarousel(
-                onchanged: (currentPage) {
-                  setState(() {
-                    _currentPage = currentPage;
-                  });
+              LayoutBuilder(
+                builder: (context, constraint) {
+                  if(constraint.maxHeight <= 750) {
+                    return Padding(
+                      padding: EdgeInsets.only(
+                        top: 300,
+                      ),
+                      child: OnboardCarousel(
+                        onchanged: (currentPage) {
+                          setState(() {
+                            _currentPage = currentPage;
+                          });
+                        },
+                      ),
+                    );
+                  }
+                  return Padding(
+                    padding: EdgeInsets.only(top: 400),
+                    child: OnboardCarousel(
+                      onchanged: (currentPage) {
+                        setState(() {
+                          _currentPage = currentPage;
+                        });
+                      },
+                    ),
+                  );
                 },
               ),
               Align(

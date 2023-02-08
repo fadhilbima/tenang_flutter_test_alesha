@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 class OnboardCarousel extends StatelessWidget {
   OnboardCarousel({Key? key, required this.onchanged}) : super(key: key);
 
-  late int _currentPage = 0;
-
   final Function(int) onchanged;
 
   PageController pageController = PageController(
@@ -25,7 +23,7 @@ class OnboardCarousel extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(left: 22, bottom: 30),
-              height: 295,
+              height: 275,
               child: Image.asset('assets/images/doctor_female.png'),
             ),
           ],
@@ -36,7 +34,7 @@ class OnboardCarousel extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(left: 22, bottom: 30),
-              height: 355,
+              height: 325,
               child: Image.asset('assets/images/doctor_male.png'),
             ),
           ],
