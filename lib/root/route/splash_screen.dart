@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tenang_flutter_test/login/screens/login_page.dart';
 import 'package:tenang_flutter_test/onboarding/screens/onboarding_page.dart';
+import 'package:tenang_flutter_test/root/route/authroute.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (_) => valueOnboard == true
-              ? LoginPrep()
+              ? AppAuthProvider()
               : OnboardingPage(),
         ),
       );

@@ -37,6 +37,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
               .doc(registData.currentUser!.uid)
               .set(userFullname);
           emit(RegisterSuccess());
+          registData.signOut();
         } catch (e) {
           emit(RegisterFailed('Please, Fill entire form and check the agreement'));
         }

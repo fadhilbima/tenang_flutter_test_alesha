@@ -68,7 +68,12 @@ class _RegisterPageState extends State<RegisterPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(Icons.arrow_back_ios_new_rounded),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(Icons.arrow_back_ios_new_rounded),
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -202,6 +207,12 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 InkWell(
+                  onTap: () {
+                    Navigator.popUntil(context, (route) => route.isFirst);
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
+                      return const LoginPrep();
+                    }));
+                  },
                   child: Text(
                     'Sign in!',
                     style: TextStyle(
