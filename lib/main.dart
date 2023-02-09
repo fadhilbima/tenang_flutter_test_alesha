@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tenang_flutter_test/login/bloc/login_bloc.dart';
 import 'package:tenang_flutter_test/login/screens/login_page.dart';
 import 'package:tenang_flutter_test/onboarding/screens/onboarding_page.dart';
+import 'package:tenang_flutter_test/root/route/splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,10 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider(
-        create: (context) => LoginBloc(),
-        child: LoginPage(),
-      )
+      home: SplashScreen(),
     );
   }
 }

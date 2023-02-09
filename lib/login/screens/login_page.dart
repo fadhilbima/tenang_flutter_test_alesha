@@ -3,6 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tenang_flutter_test/login/bloc/login_bloc.dart';
 
+class LoginPrep extends StatelessWidget {
+  const LoginPrep({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => LoginBloc(),
+      child: LoginPage(),
+    );
+  }
+}
+
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -88,7 +100,8 @@ class LoginPage extends StatelessWidget {
                         ),
                         SizedBox(height: 15),
                         TextFormField(
-                            controller: context.read<LoginBloc>().passwordController,
+                          obscureText: true,
+                          controller: context.read<LoginBloc>().passwordController,
                           decoration: InputDecoration(
                             prefixIcon: Padding(
                                 padding: EdgeInsets.only(left: 22, right: 18),

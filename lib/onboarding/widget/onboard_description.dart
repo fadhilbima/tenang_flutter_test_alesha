@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tenang_flutter_test/login/screens/login_page.dart';
 
 class OnboardDescription extends StatelessWidget {
   OnboardDescription({Key? key, required this.currentDesc}) : super(key: key);
@@ -99,8 +101,15 @@ class OnboardDescription extends StatelessWidget {
                 ),
                 backgroundColor: Color(0xFF4A80FF)
               ),
-              onPressed: () {
-                print('clicked');
+              onPressed: () async {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => LoginPrep(),
+                  ), (route) => false,
+                );
+                SharedPreferences prefs = await SharedPreferences.getInstance();
+                prefs.setBool('skipOnboarding', true);
               },
               child: Text(
                 'Continue',

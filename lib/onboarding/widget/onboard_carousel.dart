@@ -23,7 +23,7 @@ class OnboardCarousel extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(left: 22, bottom: 30),
-              height: 275,
+              height: 225,
               child: Image.asset('assets/images/doctor_female.png'),
             ),
           ],
@@ -34,7 +34,7 @@ class OnboardCarousel extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(left: 22, bottom: 30),
-              height: 325,
+              height: 285,
               child: Image.asset('assets/images/doctor_male.png'),
             ),
           ],
@@ -46,7 +46,7 @@ class OnboardCarousel extends StatelessWidget {
             Container(
               alignment: Alignment.centerLeft,
               margin: EdgeInsets.only(left: 22, bottom: 30),
-              height: 295,
+              height: 245,
               child: Image.asset('assets/images/yoga.png'),
             ),
           ],
