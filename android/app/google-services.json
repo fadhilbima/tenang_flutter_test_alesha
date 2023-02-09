@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987616012511",
+    "project_id": "tenang-flutter-test",
+    "storage_bucket": "tenang-flutter-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987616012511:android:0dc04df48c2cd3993be16a",
+        "android_client_info": {
+          "package_name": "com.example.tenang_flutter_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987616012511-l937fqpbgm69dmfo3th3p3jske3qlp7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbtPLVKRatQ9qKGJRYkpfnbQu0EKKR6v0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987616012511-l937fqpbgm69dmfo3th3p3jske3qlp7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
