@@ -25,19 +25,9 @@ class HomePage extends StatelessWidget {
       listener: (context, state) {
 
       },
-      child: Scaffold(
-        body: Center(
-            child: ElevatedButton(
-              onPressed: () {
-                context.read<HomeBloc>().add(SignOutEvent());
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
-                  return const LoginPrep();
-                }));
-              },
-              child: Text('Log Out'),
-            )
-        ),
-      ),
+      child: Center(
+        child: Text('Home Page'),
+      )
     );
   }
 }

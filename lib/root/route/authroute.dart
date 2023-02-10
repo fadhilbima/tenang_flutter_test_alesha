@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tenang_flutter_test/home/screens/home_page.dart';
 import 'package:tenang_flutter_test/login/screens/login_page.dart';
 import 'package:tenang_flutter_test/root/bloc/auth_bloc.dart';
+import 'package:tenang_flutter_test/root/route/bottom_navbar.dart';
 
 class AppAuthProvider extends StatelessWidget {
   const AppAuthProvider({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class AppAuth extends StatelessWidget {
         if(state is AuthSuccess) {
           Navigator.popUntil(context, (route) => route.isFirst);
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
-            return HomePrep();
+            return MainMenu();
           }));
         }
       },

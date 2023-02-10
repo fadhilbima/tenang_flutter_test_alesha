@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tenang_flutter_test/login/bloc/login_bloc.dart';
 import 'package:tenang_flutter_test/register/screens/register_page.dart';
+import 'package:tenang_flutter_test/root/route/authroute.dart';
 
 class LoginPrep extends StatelessWidget {
   const LoginPrep({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class LoginPage extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (_) {
-                return Container();
+                return AppAuthProvider();
               },
             ),
           );
