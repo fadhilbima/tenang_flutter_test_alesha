@@ -52,34 +52,20 @@ class ProfilePage extends StatelessWidget {
                           height: 60,
                           width: 60,
                           decoration: BoxDecoration(
-                              color: Colors.grey,
-                              shape: BoxShape.circle,
+                            color: Colors.grey,
+                            shape: BoxShape.circle,
                           ),
                           child: Icon(Icons.person, size: 40,),
                         ),
                         SizedBox(height: 10,),
-                        FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
-                          future: context.read<ProfileBloc>()
-                              .storage
-                              .collection('usersData')
-                              .doc(context.read<ProfileBloc>().authData.currentUser!.uid)
-                              .get(),
-                          builder: (_, snapshot) {
-                            if(snapshot.hasData) {
-                              var data = snapshot.data!.data();
-                              var value = data!['fullname'];
-                              return Text(
-                                value,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700
-                                ),
-                                textAlign: TextAlign.center,
-                              );
-                            }
-                            return Text('');
-                          },
-                        )
+                        Text(
+                          context.read<ProfileBloc>().name,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ],
                     ),
                   ),
@@ -103,7 +89,7 @@ class ProfilePage extends StatelessWidget {
                   Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red
+                          backgroundColor: Colors.red
                       ),
                       onPressed: () {
                         context.read<ProfileBloc>().add(SignOutEvent());
@@ -115,8 +101,10 @@ class ProfilePage extends StatelessWidget {
               ),
             );
           }
-          return Center(
-            child: CircularProgressIndicator(),
+          return SafeArea(
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
           );
         },
       )

@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -16,9 +14,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       if(authData.currentUser == null) {
         emit(AuthFailed());
       } else {
-        final meetRequirement = userData.User(
+        final meetRequirement = userData.AleshaUser(
           email: authData.currentUser!.email!,
-          password: authData.currentUser!.uid,
+          uid: authData.currentUser!.uid,
         );
         emit(AuthSuccess(meetRequirement));
       }

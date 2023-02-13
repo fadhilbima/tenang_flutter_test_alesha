@@ -15,7 +15,7 @@ class AuthLoading extends AuthState {
 }
 
 class AuthSuccess extends AuthState {
-  final userData.User dataMeet;
+  final userData.AleshaUser dataMeet;
   AuthSuccess(this.dataMeet);
   @override
   List<Object> get props => [dataMeet];
