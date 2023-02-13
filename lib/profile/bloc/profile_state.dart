@@ -23,3 +23,13 @@ class GetDataState extends ProfileState {
   @override
   List<Object> get props => [];
 }
+
+class UpdateProfilePicState extends ProfileState {
+  @override
+  List<Object> get props => [];
+}
+
+class ProfilePicUpdated extends ProfileState {
+  @override
+  List<Object> get props => [];
+}
